@@ -1,0 +1,567 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>SmartPark – Tu parqueadero, tu control</title>
+  <link href="https://fonts.googleapis.com/css2?family=Exo+2:wght@400;600;700;900&family=Inter:wght@300;400;500&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="styles.css"/>
+</head>
+<body>
+
+<!-- ════════════════════════════════════════
+     NAVBAR
+     Las pestañas usan href="#id" para activar
+     páginas con CSS :target
+════════════════════════════════════════ -->
+<nav>
+  <a href="#inicio" class="nav-logo">
+    <div class="logo-icon">
+      <svg viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
+    </div>
+    <div>
+      <div class="logo-text">Smart<span>Park</span></div>
+      <div class="logo-sub">Tu parqueadero, tu control</div>
+    </div>
+  </a>
+
+  <div class="nav-tabs">
+    <a href="#inicio"          class="nav-tab" id="tab-inicio">Inicio</a>
+    <a href="#nosotros"        class="nav-tab" id="tab-nosotros">Nosotros</a>
+    <a href="#funcionalidades" class="nav-tab" id="tab-funcionalidades">Funcionalidades</a>
+    <a href="#buscar"          class="nav-tab" id="tab-buscar">Buscar</a>
+  </div>
+
+  <div class="nav-social">
+    <a href="#" title="X">
+      <svg viewBox="0 0 24 24"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.742l7.73-8.835L1.254 2.25H8.08l4.253 5.622zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+    </a>
+    <a href="#" title="Facebook">
+      <svg viewBox="0 0 24 24"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+    </a>
+    <a href="#" title="Instagram">
+      <svg viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 1 0 0 12.324 6.162 6.162 0 0 0 0-12.324zM12 16a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm6.406-11.845a1.44 1.44 0 1 0 0 2.881 1.44 1.44 0 0 0 0-2.881z"/></svg>
+    </a>
+    <a href="https://github.com/FelipeR-pixel/proyecto-segundo-trimestre" target="_blank" title="GitHub">
+      <svg viewBox="0 0 24 24"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg>
+    </a>
+  </div>
+</nav>
+
+
+<!-- ════════════════════════════════════════
+     PESTAÑA 1: INICIO
+════════════════════════════════════════ -->
+<div class="page" id="inicio">
+
+  <!-- Hero Slider (CSS puro con input radio) -->
+  <div class="hero">
+    <input type="radio" name="slider" id="s1" checked/>
+    <input type="radio" name="slider" id="s2"/>
+    <input type="radio" name="slider" id="s3"/>
+
+    <div class="slides">
+      <!-- Slide 1 -->
+      <div class="slide">
+        <div class="slide-bg" style="background-image:url('https://images.unsplash.com/photo-1449965408869-eaa3f722e40d?w=1200&q=80')"></div>
+        <div class="slide-card">
+          <img src="https://images.unsplash.com/photo-1503376780353-7e6692767b70?w=300&q=80" alt="Carro"/>
+          <h2>Parqueadero Carro</h2>
+          <p>¡Busca parqueaderos cerca a ti!</p>
+          <a href="#buscar" class="btn-green">Ver más</a>
+        </div>
+      </div>
+      <!-- Slide 2 -->
+      <div class="slide">
+        <div class="slide-bg" style="background-image:url('https://images.unsplash.com/photo-1506521781263-d8422e82f27a?w=1200&q=80')"></div>
+        <div class="slide-card">
+          <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=300&q=80" alt="Moto"/>
+          <h2>Parqueadero Moto</h2>
+          <p>¡Registra tu moto de forma segura!</p>
+          <a href="#buscar" class="btn-green">Ver más</a>
+        </div>
+      </div>
+      <!-- Slide 3 -->
+      <div class="slide">
+        <div class="slide-bg" style="background-image:url('https://images.unsplash.com/photo-1560179707-f14e90ef3623?w=1200&q=80')"></div>
+        <div class="slide-card">
+          <img src="https://images.unsplash.com/photo-1512917774080-9991f1c4c750?w=300&q=80" alt="Residencial"/>
+          <h2>Control Residencial</h2>
+          <p>¡Administra tu conjunto inteligentemente!</p>
+          <a href="#funcionalidades" class="btn-green">Ver más</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Dots para cambiar slide -->
+    <div class="slider-dots">
+      <label for="s1"></label>
+      <label for="s2"></label>
+      <label for="s3"></label>
+    </div>
+  </div>
+
+  <!-- Estadísticas -->
+  <div class="highlight-strip">
+    <div class="hl-item">
+      <div class="hl-num">20</div>
+      <div class="hl-label">Req. Funcionales</div>
+    </div>
+    <div class="hl-item">
+      <div class="hl-num">5</div>
+      <div class="hl-label">Módulos del Sistema</div>
+    </div>
+    <div class="hl-item">
+      <div class="hl-num">3</div>
+      <div class="hl-label">Desarrolladores</div>
+    </div>
+    <div class="hl-item">
+      <div class="hl-num">100%</div>
+      <div class="hl-label">Web &amp; Responsive</div>
+    </div>
+  </div>
+
+  <!-- Zonas -->
+  <section class="section">
+    <h2 class="section-title">Zonas <span>Disponibles</span></h2>
+    <div class="zonas-grid">
+
+      <a href="#buscar" class="zona-card">
+        <img class="zona-img" src="./imagenes/atacama3.jpg" alt="Zona C"/>
+        <div class="zona-label">TORRE 2</div>
+      </a>
+      <a href="#buscar" class="zona-card">
+        <img class="zona-img" src="./imagenes/atacama2.jpg" alt="Zona D"/>
+        <div class="zona-label">TORRE 3</div>
+      </a>
+      <a href="#buscar" class="zona-card">
+        <img class="zona-img" src="./imagenes/atacama1.jpg" alt="Zona E"/>
+        <div class="zona-label">TORRE 1</div>
+      </a>
+    </div>
+  </section>
+
+  <footer>
+    <p><strong>SmartPark</strong> · Tu parqueadero, tu control · &copy; 2026 · SENA ADSO · Bogotá D.C.</p>
+  </footer>
+
+</div><!-- fin #inicio -->
+
+
+<!-- ════════════════════════════════════════
+     PESTAÑA 2: NOSOTROS
+════════════════════════════════════════ -->
+<div class="page" id="nosotros">
+
+  <!-- Qué es SmartPark -->
+  <div class="about-hero">
+    <div class="about-inner">
+      <div class="about-text">
+        <h2>¿Qué es SmartPark?</h2>
+        <p>SmartPark es un sistema web diseñado para gestionar y controlar de manera organizada los parqueaderos de unidades residenciales en Colombia.</p>
+        <p>Reemplaza el control manual por una herramienta digital que mejora la organización, reduce conflictos y facilita la administración de espacios vehiculares.</p>
+        <p><strong style="color:var(--green)">Misión:</strong> <span style="color:#ccc"> Brindar una solución digital eficiente y confiable para la administración de parqueaderos residenciales.</span></p>
+        <p><strong style="color:var(--green)">Visión:</strong> <span style="color:#ccc"> Convertirse en el sistema de referencia para la gestión de parqueaderos en conjuntos residenciales.</span></p>
+      </div>
+      <div class="about-features">
+        <div class="feat-card">
+          <div class="feat-icon">🏠</div>
+          <h3>Residentes</h3>
+          <p>Registro y gestión completa de residentes y sus vehículos.</p>
+        </div>
+        <div class="feat-card">
+          <div class="feat-icon">🚗</div>
+          <h3>Vehículos</h3>
+          <p>Control de placas y asignación de cupos por residente.</p>
+        </div>
+        <div class="feat-card">
+          <div class="feat-icon">🅿️</div>
+          <h3>Parqueaderos</h3>
+          <p>Estado en tiempo real: libre u ocupado por cupo.</p>
+        </div>
+        <div class="feat-card">
+          <div class="feat-icon">👤</div>
+          <h3>Visitantes</h3>
+          <p>Registro de ingresos y salidas de vehículos visitantes.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Problemática -->
+  <section class="section" style="background:var(--gray)">
+    <h2 class="section-title">La <span>Problemática</span></h2>
+    <div class="problemas-grid">
+      <div class="info-card">
+        <div class="ic-icon">⚠️</div>
+        <div><h3>Uso indebido de cupos</h3><p>Residentes usando espacios ajenos sin ningún control.</p></div>
+      </div>
+      <div class="info-card">
+        <div class="ic-icon">😤</div>
+        <div><h3>Conflictos entre residentes</h3><p>Disputas frecuentes por falta de asignación clara.</p></div>
+      </div>
+      <div class="info-card">
+        <div class="ic-icon">📋</div>
+        <div><h3>Control manual</h3><p>Registros en papel propensos a errores y pérdida.</p></div>
+      </div>
+      <div class="info-card">
+        <div class="ic-icon">🔍</div>
+        <div><h3>Sin control de visitantes</h3><p>Ingreso sin registro de vehículos externos.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Fases -->
+  <section class="section">
+    <h2 class="section-title">Fases de <span>Desarrollo</span></h2>
+    <div class="fases-grid">
+      <div class="fase-card"><div class="fase-num">01</div><h3>Análisis</h3><p>Identificación de necesidades y requerimientos.</p></div>
+      <div class="fase-card"><div class="fase-num">02</div><h3>Diseño</h3><p>Modelado de BD, arquitectura y prototipos.</p></div>
+      <div class="fase-card"><div class="fase-num">03</div><h3>Desarrollo</h3><p>Programación de funcionalidades del sistema.</p></div>
+      <div class="fase-card"><div class="fase-num">04</div><h3>Pruebas</h3><p>Verificación y corrección de errores.</p></div>
+      <div class="fase-card"><div class="fase-num">05</div><h3>Implementación</h3><p>Instalación y puesta en funcionamiento.</p></div>
+      <div class="fase-card"><div class="fase-num">06</div><h3>Documentación</h3><p>Manual técnico y de usuario.</p></div>
+    </div>
+  </section>
+
+  <!-- Equipo -->
+  <section class="section" style="background:var(--gray)">
+    <h2 class="section-title">Equipo de <span>Desarrollo</span></h2>
+    <div class="team-grid">
+      <div class="team-card">
+        <div class="team-avatar">👨‍💻</div>
+        <h3>Jhoan Felipe Rubiano</h3>
+        <p>Analista &amp; Desarrollador</p>
+      </div>
+      <div class="team-card">
+        <div class="team-avatar">👨‍🎨</div>
+        <h3>Santiago Merchan</h3>
+        <p>Diseñador del Sistema</p>
+      </div>
+      <div class="team-card">
+        <div class="team-avatar">🧪</div>
+        <h3>Brayan Alejandro Salinas</h3>
+        <p>Tester &amp; Documentador</p>
+      </div>
+    </div>
+    <div class="sena-badge">
+      <span>SENA · Ficha 3309838 · ADSO · Bogotá D.C. · 2026</span>
+    </div>
+  </section>
+
+  <!-- GitHub -->
+  <div class="github-section">
+    <h2>Repositorio <span>GitHub</span></h2>
+    <p>Accede al código fuente completo del proyecto SmartPark.</p>
+    <a href="https://github.com/FelipeR-pixel/proyecto-segundo-trimestre" target="_blank" class="btn-outline">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg>
+      Ver en GitHub
+    </a>
+  </div>
+
+  <footer>
+    <p><strong>SmartPark</strong> · Tu parqueadero, tu control · &copy; 2026 · SENA ADSO · Bogotá D.C.</p>
+  </footer>
+
+</div><!-- fin #nosotros -->
+
+
+<!-- ════════════════════════════════════════
+     PESTAÑA 3: FUNCIONALIDADES
+════════════════════════════════════════ -->
+<div class="page" id="funcionalidades">
+
+  <!-- Pasos -->
+  <section class="section" style="background:var(--gray)">
+    <h2 class="section-title">¿Cómo <span>Funciona</span>?</h2>
+    <div class="steps">
+      <div class="step">
+        <div class="step-num">1</div>
+        <div class="step-icon">🔐</div>
+        <h3>Inicia Sesión</h3>
+        <p>Accede con usuario y contraseña desde cualquier navegador.</p>
+      </div>
+      <div class="step-arrow">→</div>
+      <div class="step">
+        <div class="step-num">2</div>
+        <div class="step-icon">📋</div>
+        <h3>Registra</h3>
+        <p>Agrega residentes, vehículos y cupos de parqueadero.</p>
+      </div>
+      <div class="step-arrow">→</div>
+      <div class="step">
+        <div class="step-num">3</div>
+        <div class="step-icon">🔍</div>
+        <h3>Consulta</h3>
+        <p>Verifica disponibilidad y busca por placa o residente.</p>
+      </div>
+      <div class="step-arrow">→</div>
+      <div class="step">
+        <div class="step-num">4</div>
+        <div class="step-icon">📊</div>
+        <h3>Historial</h3>
+        <p>Genera reportes de uso de parqueaderos.</p>
+      </div>
+      <div class="step-arrow">→</div>
+      <div class="step">
+        <div class="step-num">5</div>
+        <div class="step-icon">✅</div>
+        <h3>Control Total</h3>
+        <p>Administra toda la información del conjunto.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Arquitectura -->
+  <section class="section" style="background:var(--black)">
+    <h2 class="section-title" style="color:var(--white)">Arquitectura de la <span>Solución</span></h2>
+    <div class="arch-cards">
+      <div class="arch-card">
+        <div class="arch-icon">🖥️</div>
+        <h3>Cliente (Frontend)</h3>
+        <p>Interfaz accesible desde cualquier navegador. HTML, CSS.</p>
+      </div>
+      <div class="arch-arrow">→</div>
+      <div class="arch-card">
+        <div class="arch-icon">⚙️</div>
+        <h3>Servidor (Backend)</h3>
+        <p>Lógica del sistema y procesamiento de datos con PHP y XAMPP.</p>
+      </div>
+      <div class="arch-arrow">→</div>
+      <div class="arch-card">
+        <div class="arch-icon">🗄️</div>
+        <h3>Base de Datos</h3>
+        <p>Almacenamiento relacional con MySQL. Motor confiable y escalable.</p>
+      </div>
+    </div>
+    <p style="text-align:center;color:#555;margin-top:1.5rem;font-size:.85rem;">
+      Flujo: Usuario &rarr; Interfaz Web &rarr; Servidor PHP &rarr; Base de Datos MySQL
+    </p>
+  </section>
+
+  <!-- Requerimientos (tabs CSS puro con input radio) -->
+  <section class="section">
+    <h2 class="section-title">Requerimientos <span>del Sistema</span></h2>
+
+    <div class="req-tabs-wrapper">
+      <input type="radio" name="req" id="req-rf" checked/>
+      <input type="radio" name="req" id="req-rnf"/>
+
+      <div class="req-tabs">
+        <label class="req-tab" for="req-rf">&#10003; Funcionales (20)</label>
+        <label class="req-tab" for="req-rnf">&#9881; No Funcionales (10)</label>
+      </div>
+
+      <div class="req-panels">
+        <div class="req-panel" id="panel-rf">
+          <ul class="req-list">
+            <li><strong>RF1.</strong> Registrar residentes de la unidad residencial.</li>
+            <li><strong>RF2.</strong> Consultar información de los residentes.</li>
+            <li><strong>RF3.</strong> Actualizar datos de residentes.</li>
+            <li><strong>RF4.</strong> Eliminar residentes del sistema.</li>
+            <li><strong>RF5.</strong> Registrar vehículos de residentes.</li>
+            <li><strong>RF6.</strong> Asociar vehículos a residentes específicos.</li>
+            <li><strong>RF7.</strong> Consultar vehículos registrados.</li>
+            <li><strong>RF8.</strong> Actualizar datos de vehículos.</li>
+            <li><strong>RF9.</strong> Eliminar vehículos del sistema.</li>
+            <li><strong>RF10.</strong> Crear cupos de parqueadero.</li>
+            <li><strong>RF11.</strong> Asignar cupos a residentes.</li>
+            <li><strong>RF12.</strong> Mostrar estado libre/ocupado por cupo.</li>
+            <li><strong>RF13.</strong> Consultar disponibilidad de cupos.</li>
+            <li><strong>RF14.</strong> Registrar visitantes al conjunto.</li>
+            <li><strong>RF15.</strong> Registrar ingreso de vehículos visitantes.</li>
+            <li><strong>RF16.</strong> Registrar salida de visitantes.</li>
+            <li><strong>RF17.</strong> Consultar visitantes activos en el conjunto.</li>
+            <li><strong>RF18.</strong> Generar historial de uso de parqueaderos.</li>
+            <li><strong>RF19.</strong> Búsquedas por placa o nombre de residente.</li>
+            <li><strong>RF20.</strong> Acceso al sistema mediante usuario y contraseña.</li>
+          </ul>
+        </div>
+        <div class="req-panel" id="panel-rnf">
+          <ul class="req-list">
+            <li><strong>RNF1.</strong> Sistema web accesible desde navegadores comunes.</li>
+            <li><strong>RNF2.</strong> Interfaz sencilla y fácil de usar para administración.</li>
+            <li><strong>RNF3.</strong> Seguridad mediante autenticación de usuarios.</li>
+            <li><strong>RNF4.</strong> Almacenamiento en base de datos relacional MySQL.</li>
+            <li><strong>RNF5.</strong> Consultas procesadas en menos de 3 segundos.</li>
+            <li><strong>RNF6.</strong> Compatible con computadores de oficina estándar.</li>
+            <li><strong>RNF7.</strong> Integridad y consistencia de los datos registrados.</li>
+            <li><strong>RNF8.</strong> Permite realizar respaldo de la base de datos.</li>
+            <li><strong>RNF9.</strong> Disponible en horarios administrativos requeridos.</li>
+            <li><strong>RNF10.</strong> Escalabilidad básica para crecimiento futuro.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Tecnologías -->
+  <section class="section" style="background:var(--gray)">
+    <h2 class="section-title">Tecnologías <span>Utilizadas</span></h2>
+    <div class="tech-grid">
+      <div class="tech-pill">HTML5</div>
+      <div class="tech-pill">CSS3</div>
+      <div class="tech-pill">JavaScript</div>
+      <div class="tech-pill">PHP</div>
+      <div class="tech-pill">MySQL</div>
+      <div class="tech-pill">XAMPP</div>
+      <div class="tech-pill">Visual Studio Code</div>
+      <div class="tech-pill">Draw.io</div>
+    </div>
+    <p style="text-align:center;margin-top:1.5rem;font-size:.85rem;color:#666;">
+      Entidades: <strong>Residentes &middot; Vehículos &middot; Parqueaderos &middot; Visitantes &middot; Registros de Ingreso</strong>
+    </p>
+  </section>
+
+  <!-- Cronograma -->
+  <section class="section">
+    <h2 class="section-title">Cronograma de <span>Trabajo</span></h2>
+    <div class="cronograma">
+      <div class="crono-item"><span class="crono-time">2 semanas</span><span class="crono-desc">Análisis de requerimientos del sistema.</span></div>
+      <div class="crono-item"><span class="crono-time">1 semana</span><span class="crono-desc">Diseño de base de datos y diagramas UML.</span></div>
+      <div class="crono-item"><span class="crono-time">3 semanas</span><span class="crono-desc">Desarrollo módulo de residentes y vehículos.</span></div>
+      <div class="crono-item"><span class="crono-time">3 semanas</span><span class="crono-desc">Desarrollo módulo de parqueaderos y visitantes.</span></div>
+      <div class="crono-item"><span class="crono-time">1 semana</span><span class="crono-desc">Pruebas de funcionamiento y ajustes finales.</span></div>
+      <div class="crono-item"><span class="crono-time">2 semanas</span><span class="crono-desc">Documentación técnica y entrega final al SENA.</span></div>
+    </div>
+  </section>
+
+  <footer>
+    <p><strong>SmartPark</strong> · Tu parqueadero, tu control · &copy; 2026 · SENA ADSO · Bogotá D.C.</p>
+  </footer>
+
+</div><!-- fin #funcionalidades -->
+
+
+<!-- ════════════════════════════════════════
+     PESTAÑA 4: BUSCAR
+════════════════════════════════════════ -->
+<div class="page" id="buscar">
+
+  <div class="buscar-hero">
+    <h1>Buscar <span>Parqueadero</span></h1>
+    <p>Encuentra disponibilidad en tu zona residencial</p>
+  </div>
+
+  <div class="buscar-layout">
+
+    <!-- Formulario -->
+    <div class="buscar-form-box">
+      <h2>&#128269; Consultar disponibilidad</h2>
+
+      <div class="form-group">
+        <label for="tipo">Tipo de vehículo</label>
+        <select id="tipo" name="tipo">
+          <option value="">Selecciona...</option>
+          <option value="carro">Carro</option>
+          <option value="moto">Moto</option>
+          <option value="bicicleta">Bicicleta</option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <label for="zona">Zona residencial</label>
+        <select id="zona" name="zona">
+          <option value="">Selecciona...</option>
+          <option value="A">Zona A</option>
+          <option value="B">Zona B</option>
+          <option value="C">Zona C</option>
+          <option value="D">Zona D</option>
+          <option value="E">Zona E</option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <label for="placa">Placa del vehículo</label>
+        <input type="text" id="placa" name="placa" placeholder="Ej: ABC123" maxlength="7"/>
+      </div>
+
+      <div class="form-group">
+        <label for="residente">Nombre del residente</label>
+        <input type="text" id="residente" name="residente" placeholder="Nombre completo"/>
+      </div>
+
+      <div class="buscar-btn-row">
+        <button class="btn-green" style="flex:1;padding:.65rem;border:none;cursor:pointer" type="submit">&#128269; Buscar</button>
+        <button class="btn-outline" style="flex:1;padding:.65rem;border:2px solid var(--green);cursor:pointer" type="reset">Limpiar</button>
+      </div>
+    </div>
+
+    <!-- Info lateral -->
+    <div class="buscar-info-box">
+      <div class="info-card">
+        <div class="ic-icon">⏱️</div>
+        <div><h3>Respuesta rápida</h3><p>El sistema procesa consultas en menos de 3 segundos (RNF5).</p></div>
+      </div>
+      <div class="info-card">
+        <div class="ic-icon">🔒</div>
+        <div><h3>Acceso seguro</h3><p>Solo administradores y residentes registrados gestionan los cupos.</p></div>
+      </div>
+      <div class="info-card">
+        <div class="ic-icon">📱</div>
+        <div><h3>Cualquier dispositivo</h3><p>Compatible con navegadores modernos en computadores y móviles.</p></div>
+      </div>
+      <div class="info-card">
+        <div class="ic-icon">📊</div>
+        <div><h3>Historial completo</h3><p>Consulta el registro histórico de uso de cada cupo.</p></div>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- Mapa de zonas -->
+  <div class="zonas-mapa">
+    <h2 class="section-title">Torres del <span>Conjunto</span></h2>
+    <div class="zonas-mapa-grid">
+      <div class="zona-mapa-card">
+        <img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=200&q=80" alt="Zona A"/>
+        <div class="zona-mapa-info">
+          <h4>Torre 1</h4>
+          <span>Aptos 101 &ndash; 1206</span><br/>
+          <span class="zona-badge">Disponible</span>
+        </div>
+      </div>
+      <div class="zona-mapa-card">
+        <img src="https://images.unsplash.com/photo-1477959858617-67f85cf4f1df?w=200&q=80" alt="Zona B"/>
+        <div class="zona-mapa-info">
+          <h4>Torre 2</h4>
+          <span>Aptos 101 &ndash; 1206</span><br/>
+          <span class="zona-badge">Disponible</span>
+        </div>
+      </div>
+      <div class="zona-mapa-card">
+        <img src="https://images.unsplash.com/photo-1564013799919-ab600027ffc6?w=200&q=80" alt="Zona C"/>
+        <div class="zona-mapa-info">
+          <h4>Torre 3</h4>
+          <span>Aptos 101 &ndash; 1206</span><br/>
+          <span class="zona-badge ocupada">Ocupada</span>
+        </div>
+      </div>
+      <div class="zona-mapa-card">
+        <img src="https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?w=200&q=80" alt="Zona D"/>
+        <div class="zona-mapa-info">
+          <h4>Torre 4</h4>
+          <span>Aptos 101 &ndash; Aptos 1206</span><br/>
+          <span class="zona-badge">Disponible</span>
+        </div>
+      </div>
+      <div class="zona-mapa-card">
+        <img src="https://images.unsplash.com/photo-1512917774080-9991f1c4c750?w=200&q=80" alt="Zona E"/>
+        <div class="zona-mapa-info">
+          <h4>Torre 5</h4>
+          <span>Aptos 101 &ndash; 1206</span><br/>
+          <span class="zona-badge">Disponible</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    <p><strong>SmartPark</strong> · Tu parqueadero, tu control · &copy; 2026 · SENA ADSO · Bogotá D.C.</p>
+    <p style="margin-top:.4rem">Desarrollado por Jhoan Rubiano &middot; Santiago Merchan &middot; Brayan Salinas</p>
+  </footer>
+
+</div><!-- fin #buscar -->
+
+</body>
+</html>
